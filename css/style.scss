@@ -1,0 +1,79 @@
+/*CSS Reset*/
+body {
+    background-color: #1F2937;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*All Pages*/
+
+p{
+    color: white;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+}
+
+.green-text{
+    color: #34D399;
+}
+
+.align-button{
+    display: flex;
+}
+
+
+@mixin cal-sans{
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cal-sans-large {
+    @include cal-sans;
+    font-size: 2.5rem;
+  }
+
+.cal-sans-regular {
+    @include cal-sans;
+    font-size: 1.5rem;
+  }
+
+.cal-sans-small {
+    @include cal-sans;
+    font-size: 1rem;
+  }
+
+/*CSS Grid to Display Images*/
+.container{
+    margin: 10%;
+}
+.container p{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    gap: 5%;
+    color: black;
+  }
+
+.container card{
+    background-color: white;
+}
+
+
+/*Mobile Responsiveness at < 320px*/
+
+
+/*Stack navbar vertically*/
+
+/*Stack images vertically in a single column*/
