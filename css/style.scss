@@ -1,9 +1,15 @@
 /*CSS Reset*/
-body {
-    background-color: #1F2937;
+*{
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: #1F2937;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
@@ -12,14 +18,20 @@ a {
 }
 
 /*All Pages*/
+.main{
+    flex: 1; //Extend main contents; footer resides at bottom of page
+    min-height: 45vh;
+}
 
-p{
+p, h1, h3 {
     color: white;
+    text-align: center;
 }
 
 .flex{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 10%;
 }
@@ -28,8 +40,13 @@ p{
     color: #34D399;
 }
 
+.center-text{
+    text-align: center;
+}
+
 .align-button{
     display: flex;
+    gap: 1%;
 }
 
 
@@ -41,7 +58,8 @@ p{
 
 .cal-sans-large {
     @include cal-sans;
-    font-size: 2.5rem;
+    font-size: 5.25rem;
+    font-weight: 500;
   }
 
 .cal-sans-regular {
@@ -51,13 +69,71 @@ p{
 
 .cal-sans-small {
     @include cal-sans;
-    font-size: 1rem;
+    color: #ccc;
+    font-size: 1.25rem;
   }
 
-/*CSS Grid to Display Images*/
-.container{
-    margin: 10%;
+.home-img-container{
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
+
+#search-icon-frontpage{
+    border-radius: 50%;
+    width: 125px;
+    position: relative;
+    top: -10px;
+}
+
+// #search-keyword{
+//     max-width: 1000px;
+// }
+
+// input[type=text] {
+//   width: 100%;
+//   //padding: 12px 20px;
+//   margin: 8px 0;
+//   //box-sizing: border-box;
+// }
+
+input[type=text]:hover{
+    border: 2px solid #34D399;
+}
+
+.tag-paragraph{
+  position: relative;
+  top: 10px;
+}
+
+.tag {
+  //@include tag-paragraph;
+  background-color: #374151;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin: 0 4px;
+  color: white;
+}
+
+
+.search-btn{
+    border: none;
+    border-radius: 6px;
+    background-color: #34D399;
+    padding: 5px 16px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1.25px;
+}
+
+.search-btn:hover{
+    background-color: #16a34a;
+}
+
+
+/*CSS Grid to Display Images*/
 .container p{
     display: grid;
     grid-template-columns: auto auto auto;

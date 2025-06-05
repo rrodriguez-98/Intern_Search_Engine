@@ -1,9 +1,15 @@
 /*CSS Reset*/
-body {
-  background-color: #1F2937;
+* {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: #1F2937;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -12,13 +18,20 @@ a {
 }
 
 /*All Pages*/
-p {
+.main {
+  flex: 1;
+  min-height: 45vh;
+}
+
+p, h1, h3 {
   color: white;
+  text-align: center;
 }
 
 .flex {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin: 10%;
 }
@@ -27,11 +40,21 @@ p {
   color: #34D399;
 }
 
+.center-text {
+  text-align: center;
+}
+
+.align-button {
+  display: flex;
+  gap: 1%;
+}
+
 .cal-sans-large {
   font-family: "Cal Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.5rem;
+  font-size: 5.25rem;
+  font-weight: 500;
 }
 
 .cal-sans-regular {
@@ -45,14 +68,57 @@ p {
   font-family: "Cal Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1rem;
+  color: #ccc;
+  font-size: 1.25rem;
+}
+
+.home-img-container {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+#search-icon-frontpage {
+  border-radius: 50%;
+  width: 125px;
+  position: relative;
+  top: -10px;
+}
+
+input[type=text]:hover {
+  border: 2px solid #34D399;
+}
+
+.tag-paragraph {
+  position: relative;
+  top: 10px;
+}
+
+.tag {
+  background-color: #374151;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin: 0 4px;
+  color: white;
+}
+
+.search-btn {
+  border: none;
+  border-radius: 6px;
+  background-color: #34D399;
+  padding: 5px 16px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  letter-spacing: 1.25px;
+}
+
+.search-btn:hover {
+  background-color: #16a34a;
 }
 
 /*CSS Grid to Display Images*/
-.container {
-  margin: 10%;
-}
-
 .container p {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -63,4 +129,8 @@ p {
 
 .container card {
   background-color: white;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*Mobile Responsiveness at < 320px*/
+/*Stack navbar vertically*/
+/*Stack images vertically in a single column*//*# sourceMappingURL=style.css.map */

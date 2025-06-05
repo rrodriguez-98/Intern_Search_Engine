@@ -12,6 +12,7 @@ $("#job-search-btn").click(function(){
 
     let keyword = $("#search-keyword").val();
     let title_filter = removeSpaces(keyword);
+    
 
     const settings = {
         async: true,
@@ -30,8 +31,12 @@ $("#job-search-btn").click(function(){
             
         if (response.length!== 0){
             $("#loading-spinner").hide();
+            $("#search-keyword").val('');
             $("#job-list-header").append(`<p style="color: white">Top Results:</p>`)
             for (let i = 0; i < response.length; i++) {
+                if (response[i].organization_logo === null){
+                    response[i].organization_logo = './empty_logo.png';
+                }
                 
                 $("#job-list").append(`
                     <a href="${response[i].url}" style="color: black;">
@@ -49,9 +54,11 @@ $("#job-search-btn").click(function(){
         console.log(response);
         })
     } else {
-        $("#job-list-header").append(`<p style="color: white">Please search for a position title.</p>`)
+        $("#job-list-header").append(`<p style="color: white;">Please search for a position title.</p>`)
     }
     
 
 });
+
+
 

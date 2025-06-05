@@ -5,65 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">    
-<link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">    
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+  <!--Header Navigation-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Internship Search Central</a>
+          <a class="navbar-brand" href="./index.html">Internship Search Central</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Saved Jobs</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="./FAQ.html">FAQ</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    
-    <div class="flex">
-        <p class="green-text cal-sans-large">Find your next internship!</p>
-        <p class="cal-sans-small">Streamline your job search with this search engine that polls from a variety of sources.</p>
-        <p class="cal-sans-regular">Start your search:</p>
-        <!--User Enters Search Keyword-->
-        <div class="align-button">
-            <input type="text" placeholder="i.e. software engineer" id="search-keyword">
-            <button class="cal-sans-small" id="job-search-btn">Submit</button>
-        </div>
-
-        
+    <!--Hero Splashpage-->
+    <div class="flex main">
+      <div class="home-img-container">
+        <p class="green-text cal-sans-large center-text">Find your next internship!</p>
+        <img src="./empty_logo.png" alt="Search icon" id="search-icon-frontpage"></img>
+      </div>
+      <p class="cal-sans-small center-text">Streamline your job search with this search engine that polls from a variety of sources.</p>
+      <p class="cal-sans-regular center-text">Start your search:</p>
+      <!--User Enters Search Keyword-->
+      <div class="align-button">
+        <input type="text" placeholder="i.e. software engineer" id="search-keyword">
+        <button class="cal-sans-small search-btn" id="job-search-btn">Submit</button>
+      </div>
+      <p class="tag-paragraph">Try: <span class="tag">software engineering</span> <span class="tag">marketing</span> <span class="tag">data analyst</span></p>
     </div>
     <!--Output Search Results-->
     <div class="container">
         <h2 class="cal-sans-regular" id="job-list-header"></h2>
-          <div class="text-center">
-              <div class="spinner-border text-light" id="loading-spinner" role="status">
+          <div class="text-center"> 
+              <div class="spinner-border text-light " id="loading-spinner" role="status">
                   <span class="visually-hidden">Loading...</span>
               </div>
-              </div>
+          </div>
         <p id="job-list"></p>
     </div>
+
     <footer>
       <!--
         <p class="cal-sans-small">Copyright &copy; 2025 Find Your Next Internship. All rights reserved.</p>
         <p class="cal-sans-small">Designed by <a href="https://www.linkedin.com/in/jacob-s-kim/">Rebecca Rodriguez</a></p>
         <p class="cal-sans-small">Powered by <a href="https://www.indeed.com/">Rapid API</a></p>
     -->
-        <!-- Remove the container if you want to extend the Footer to full width. -->
-
+  
+  <!-- Remove the container if you want to extend the Footer to full width. -->
   <footer class="bg-light text-center">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
@@ -74,7 +78,7 @@
         <div class="row d-flex justify-content-center">
           <!--Grid column-->
           <div class="col-auto">
-            <p class="pt-2">
+            <p class="pt-0">
               <strong>Sign up for our newsletter</strong>
             </p>
           </div>
@@ -108,8 +112,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
-    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    © 2025 Copyright: Rebecca Rodriguez
   </div>
   <!-- Copyright -->
 </footer>
