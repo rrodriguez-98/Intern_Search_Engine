@@ -49,7 +49,6 @@ p, h1, h3 {
     gap: 1%;
 }
 
-
 @mixin cal-sans{
     font-family: "Cal Sans", sans-serif;
     font-weight: 400;
@@ -116,7 +115,6 @@ input[type=text]:hover{
   color: white;
 }
 
-
 .search-btn{
     border: none;
     border-radius: 6px;
@@ -132,8 +130,17 @@ input[type=text]:hover{
     background-color: #16a34a;
 }
 
+.tag:hover{
+    cursor: pointer;
+}
 
 /*CSS Grid to Display Images*/
+// .container{
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+// }
+
 .container p{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -148,7 +155,6 @@ input[type=text]:hover{
 
 
 /*Mobile Responsiveness at < 320px*/
-
 
 /*Stack navbar vertically*/
 

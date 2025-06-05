@@ -118,6 +118,10 @@ input[type=text]:hover {
   background-color: #16a34a;
 }
 
+.tag:hover {
+  cursor: pointer;
+}
+
 /*CSS Grid to Display Images*/
 .container p {
   display: grid;
