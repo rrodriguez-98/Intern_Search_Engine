@@ -40,14 +40,20 @@
         <p class="cal-sans-regular">Start your search:</p>
         <!--User Enters Search Keyword-->
         <div class="align-button">
-            <input type="text" placeholder="i.e. software engineer">
+            <input type="text" placeholder="i.e. software engineer" id="search-keyword">
             <button class="cal-sans-small" id="job-search-btn">Submit</button>
         </div>
+
         
     </div>
     <!--Output Search Results-->
     <div class="container">
         <h2 class="cal-sans-regular" id="job-list-header"></h2>
+          <div class="text-center">
+              <div class="spinner-border text-light" id="loading-spinner" role="status">
+                  <span class="visually-hidden">Loading...</span>
+              </div>
+              </div>
         <p id="job-list"></p>
     </div>
     <footer>
