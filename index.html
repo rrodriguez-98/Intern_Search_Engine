@@ -47,7 +47,7 @@
         <input type="text" placeholder="i.e. software engineer" id="search-keyword">
         <button class="cal-sans-small search-btn" id="job-search-btn">Submit</button>
       </div>
-      <p class="tag-paragraph">Try: <span class="tag" onclick="autoFill('software engineering')" id="try_swe">software engineering</span> <span class="tag" id="try_market">marketing</span> <span class="tag" id="try_danalyst">data analyst</span></p>
+      <p class="tag-paragraph">Try: <span class="tag" id="try_swe">software engineering</span> <span class="tag" id="try_market">marketing</span> <span class="tag" id="try_danalyst">data analyst</span></p>
     </div>
     <!--Output Search Results-->
     <div class="container">
@@ -57,7 +57,8 @@
                   <span class="visually-hidden">Loading...</span>
               </div>
           </div>
-        <p id="job-list"></p>
+        <!--<p id="job-list"></p>-->
+        <div id="job-list" class="job-grid"></div>
     </div>
 
 
