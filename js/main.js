@@ -16,7 +16,7 @@ function removeSpaces(string) {
 }
 //-------------------Initially Hide Loading Spinner------------------------------//
 $("#loading-spinner").hide();
-
+////$('#topResult').hide();
 
 //------------Function: List Job Results Upon Button Click-----------------------//
 $("#job-search-btn").click(function(){
@@ -38,9 +38,13 @@ $("#job-search-btn").click(function(){
             'x-rapidapi-host': 'internships-api.p.rapidapi.com'
         }
     };
+
+    const title = document.getElementById("job-list-header");
+
     //Check if user input is empty
     if (title_filter !== ""){
         $("#loading-spinner").show();
+        
         $.ajax(settings).done(function (response) { 
             if (response.length!== 0){
                 $("#loading-spinner").hide();
@@ -71,12 +75,20 @@ $("#job-search-btn").click(function(){
                 }
         } else{
             $("#loading-spinner").hide();
-            $("#job-list-header").append(`<p style="color: white">No results. Try another search.</p>`)
+            const newPara2 = document.createElement("p");
+            newPara2.innerHTML = `No results. Try another search.`;
+            newPara2.classList.add("center-text, white");
+            title.parentNode.insertBefore(newPara2, title.nextSibling);
+            //$("#job-list-header").append(`<p style="color: white">No results. Try another search.</p>`)
         }
         console.log(response);
         })
     } else {
-        $("#job-list-header").append(`<p style="color: white;">Please search for a position title.</p>`)
+        const newPara3 = document.createElement("p");
+        newPara3.innerHTML = `Please search for a position title.`;
+        title.parentNode.insertBefore(newPara3, title.nextSibling);
+        //$("#job-list-header").append(`<p style="color: white;">Please search for a position title.</p>`)
+        
     }
 
 });
