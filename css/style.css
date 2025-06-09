@@ -1,9 +1,10 @@
-/*CSS Reset*/
+/*------------------------CSS Reset------------------------*/
 * {
   margin: 0;
   padding: 0;
 }
 
+/*------------------------All Pages------------------------*/
 body {
   background-color: #1F2937;
   font-size: 16px;
@@ -17,7 +18,6 @@ a {
   color: white;
 }
 
-/*All Pages*/
 .main {
   flex: 1;
   min-height: 45vh;
@@ -78,6 +78,7 @@ p, h1, h3 {
   gap: 18px;
 }
 
+/*------------------------Home Page------------------------*/
 #search-icon-frontpage {
   border-radius: 50%;
   width: 125px;
@@ -131,6 +132,15 @@ input[type=text]:hover {
   left: -10%;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.white {
+  color: white;
+}
+
 .container p {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -139,22 +149,17 @@ input[type=text]:hover {
   color: black;
 }
 
-.container card {
+.container .card {
   background-color: white;
 }
 
 .job-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3.5rem;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
-@media (min-width: 320px) {
-  .job-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 .card {
   transition: box-shadow 0.3s;
 }
@@ -163,6 +168,10 @@ input[type=text]:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/*Mobile Responsiveness at < 320px*/
-/*Stack navbar vertically*/
-/*Stack images vertically in a single column*//*# sourceMappingURL=style.css.map */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes items evenly */
+  height: 100vh; /* Full viewport height */
+  padding: 2rem; /* Optional: add some breathing room */
+}/*# sourceMappingURL=style.css.map */

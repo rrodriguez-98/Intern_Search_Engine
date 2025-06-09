@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FAQ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
@@ -25,9 +25,6 @@
                 <a class="nav-link " href="./index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Saved Jobs</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="./FAQ.html">FAQ</a>
               </li>
             </ul>
@@ -35,24 +32,71 @@
         </div>
       </nav>
       <!--FAQ Content-->
-      <div class="main">
-        <h1>FAQ</h1>
-        <h3>What API is utilized?</h3>
-        <p>The Internships API provides access to a vast database of internship opportunities across various industries and locations. It aggregates listings from over 70,000 career sites and major job boards like LinkedIn and YCombinator.</p>
-        <h3>How often is the data updated?</h3>
+      <div class="main faq-container">
+        <h1 style="text-decoration: underline;">FAQ</h1>
+        <div>
+          <h3>What API is utilized?</h3>
+          <p>The Internships API provides access to a vast database of internship opportunities across various industries and locations. It aggregates listings from over 70,000 career sites and major job boards like LinkedIn and YCombinator.</p>
+        </div>
+        <div>
+          <h3>How often is the data updated?</h3>
         <p>Internship listings are refreshed every hour to ensure that the information is current and accurate.</p>
-        <h3>What is the time period of which the jobs are polled from?</h3>
+        </div>
+        <div>
+          <h3>What is the time period of which the jobs are polled from?</h3>
         <p>The job listings are posted from the last seven days.</p>
+        </div>
       </div>
 
-      <footer class="bg-body-tertiary text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2020 Copyright:
-            <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      <!--MD Bootstrap Footer Used-->
+  <footer class="bg-light text-center">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Form -->
+    <section>
+      <form>
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-0">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="form5Example2" class="form-control">
+              <label class="form-label" for="form5Example2">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
         </div>
-        <!-- Copyright -->
-    </footer>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2025 Copyright: Rebecca Rodriguez
+  </div>
+  <!-- Copyright -->
+</footer>
 
 
     

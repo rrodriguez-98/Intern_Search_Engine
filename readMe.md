@@ -1,21 +1,10 @@
-
-//Future Improvements
-Users can sign up for alerts when new internships are posted that match their interests.
-Bonus: Let them choose "daily", "weekly", or "instant" alerts!
-
-
-Users can mark internships as "Applied", "Interviewing", or "Offer Received."
-Helps users keep track of where they are in the process.
-
-Clicking a company name shows a mini profile with company description, other open roles, and website links.
-
 <a id="readme-top"></a>
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/rrodriguez-98/Intern_Search_Engine">
-    <img src="images/splashpage_icon.png" alt="Logo" width="45%" height="45%">
+    <img src="empty_logo.png" alt="Logo" width="45%" height="45%">
   </a>
 
 <h3 align="center">Internship Search Engine</h3>
@@ -67,13 +56,13 @@ I wanted to develop a practical application that would facilitate landing an int
 ## Features
 * Use a search keyword to refine internship results.
 * Click on the job to take you to the application page.
-* Click on the bookmark icon to add it to the 'Saved Jobs' page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE IMPROVEMENTS -->
 <a id="improvements"></a>
 ## Future Improvements
+* Users can mark internships as "Applied", "Interviewing", or "Offer Received."
 * Use authenticated log-in for a more dedicated log-in.
 * Filter options based on more specific criteria.
 * Option for user to opt in a monthly newsletter.

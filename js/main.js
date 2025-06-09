@@ -49,11 +49,11 @@ $("#job-search-btn").click(function(){
             if (response.length!== 0){
                 $("#loading-spinner").hide();
                 $("#search-keyword").val('');
-                //$("#job-list-header").append(`<p id="topResult" style="color: white;">Top Results:</p>`)
+                newPara2.remove();
+                newPara3.remove();
 
                 const title = document.getElementById("job-list-header");
                 const newPara = document.createElement("p");
-                //newPara.innerHTML = `<p id="topResult" style="color: white; font-size: 1.5rem; font-weight:bold; ">Top Results:</p>`;
                 newPara.id = 'topResult';
                 newPara.innerHTML = `Top Results:`;
                 title.parentNode.insertBefore(newPara, title.nextSibling);
@@ -77,18 +77,17 @@ $("#job-search-btn").click(function(){
             $("#loading-spinner").hide();
             const newPara2 = document.createElement("p");
             newPara2.innerHTML = `No results. Try another search.`;
-            newPara2.classList.add("center-text, white");
-            title.parentNode.insertBefore(newPara2, title.nextSibling);
-            //$("#job-list-header").append(`<p style="color: white">No results. Try another search.</p>`)
+            newPara2.style.color = "white";
+            newPara2.style.fontWeight = "bold"; 
+            title.after(newPara2);
         }
-        console.log(response);
         })
     } else {
         const newPara3 = document.createElement("p");
         newPara3.innerHTML = `Please search for a position title.`;
-        title.parentNode.insertBefore(newPara3, title.nextSibling);
-        //$("#job-list-header").append(`<p style="color: white;">Please search for a position title.</p>`)
-        
+        newPara3.style.color = "white";
+        newPara3.style.fontWeight = "bold"; 
+        title.after(newPara3);    
     }
 
 });

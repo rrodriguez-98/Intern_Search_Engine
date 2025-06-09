@@ -173,31 +173,12 @@ input[type=text]:hover{
 
 .job-grid {
   display: grid;
-  //grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  //grid-template-columns: repeat(3, minmax(250px, 1fr));
   //grid-template-columns: repeat(3, 1fr); //3 columns each row, takes up 1 fraction of available space
   gap: 3.5rem;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
-
-/*Set screens 320px and below*/
-// @media only screen and (max-width: 320px){
-//     .job-grid {
-//         grid-template-columns: repeat(1, 1fr) !important;
-//   }
-// }
-
-// .job-grid {
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   gap: 1.5rem;
-// }
-
-// @media (min-width: 768px) {
-//   .job-grid {
-//     grid-template-columns: repeat(3, 1fr);
-//   }
-// }
 
 
 .card {
@@ -207,9 +188,10 @@ input[type=text]:hover{
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-
-/*Mobile Responsiveness at < 320px*/
-
-/*Stack navbar vertically*/
-
-/*Stack images vertically in a single column*/
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes items evenly */
+  height: 100vh; /* Full viewport height */
+  padding: 2rem; /* Optional: add some breathing room */
+}
