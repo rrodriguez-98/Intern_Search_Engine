@@ -151,8 +151,9 @@ input[type=text]:hover{
 }
 
 .container{
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
+    // flex-wrap: wrap;
 }
 
 .white{
@@ -173,11 +174,11 @@ input[type=text]:hover{
 
 .job-grid {
   display: grid;
-  //grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  //grid-template-columns: repeat(3, minmax(250px, 1fr));
   //grid-template-columns: repeat(3, 1fr); //3 columns each row, takes up 1 fraction of available space
   gap: 3.5rem;
-  margin-bottom: 10%;
+  //margin-bottom: 10%;
 }
 
 /*Set screens 320px and below*/
@@ -213,3 +214,23 @@ input[type=text]:hover{
 /*Stack navbar vertically*/
 
 /*Stack images vertically in a single column*/
+
+
+.test{
+    // justify-content: center;
+    // align-content: center;
+    // align-items: center;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  background-color: lightgray;
+}
+
+.grid-item {
+  background-color: coral;
+  height: 100px;
+}
