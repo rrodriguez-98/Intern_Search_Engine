@@ -85,17 +85,6 @@ p, h1, h3 {
     top: -10px;
 }
 
-// #search-keyword{
-//     max-width: 1000px;
-// }
-
-// input[type=text] {
-//   width: 100%;
-//   //padding: 12px 20px;
-//   margin: 8px 0;
-//   //box-sizing: border-box;
-// }
-
 input[type=text]:hover{
     border: 2px solid #34D399;
 }
@@ -106,7 +95,6 @@ input[type=text]:hover{
 }
 
 .tag {
-  //@include tag-paragraph;
   background-color: #374151;
   padding: 4px 10px;
   border-radius: 999px;
@@ -133,14 +121,6 @@ input[type=text]:hover{
 .tag:hover{
     cursor: pointer;
 }
-
-/*CSS Grid to Display Images*/
-// .container{
-//     display: flex;
-//     align-items: center;
-//     flex-direction: column;
-// }
-
 
 #topResult{
     color: white;
@@ -171,11 +151,10 @@ input[type=text]:hover{
     background-color: white;
 }
 
+/*CSS Grid to Display Images*/
 .job-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  //grid-template-columns: repeat(3, minmax(250px, 1fr));
-  //grid-template-columns: repeat(3, 1fr); //3 columns each row, takes up 1 fraction of available space
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); //Create as many columns that will fit container
   gap: 3.5rem;
   margin-bottom: 5%;
 }

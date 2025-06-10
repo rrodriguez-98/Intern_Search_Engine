@@ -16,7 +16,6 @@ function removeSpaces(string) {
 }
 //-------------------Initially Hide Loading Spinner------------------------------//
 $("#loading-spinner").hide();
-////$('#topResult').hide();
 
 //------------Function: List Job Results Upon Button Click-----------------------//
 $("#job-search-btn").click(function(){
