@@ -23,19 +23,22 @@ $("#job-search-btn").click(function(){
     $("#job-list-header").empty();
     $("#job-list").empty();
     $("#topResult").remove();
+    $("#errorNoSearch").remove();
+    $("#errorEmptySearch").remove();
+    
     //Obtain user input
     let keyword = $("#search-keyword").val();
     let title_filter = removeSpaces(keyword);
     //API Settings
     const settings = {
-        async: true,
-        crossDomain: true,
-        url: `https://internships-api.p.rapidapi.com/active-jb-7d?title_filter=${title_filter}`,
-        method: 'GET',
-        headers: {
-            'x-rapidapi-key': 'f473df81ccmsh788d696e77ff01bp17c473jsn1ee70510cce3',
-            'x-rapidapi-host': 'internships-api.p.rapidapi.com'
-        }
+	async: true,
+	crossDomain: true,
+	url: `https://internships-api.p.rapidapi.com/active-jb-7d?title_filter=${title_filter}`,
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': 'd841a1a720msh7cb44568d78112bp19a669jsnc6fe04075993',
+		'x-rapidapi-host': 'internships-api.p.rapidapi.com'
+	}
     };
 
     const title = document.getElementById("job-list-header");
@@ -48,14 +51,12 @@ $("#job-search-btn").click(function(){
             if (response.length!== 0){
                 $("#loading-spinner").hide();
                 $("#search-keyword").val('');
-                newPara2.remove();
-                newPara3.remove();
 
                 const title = document.getElementById("job-list-header");
                 const newPara = document.createElement("p");
                 newPara.id = 'topResult';
                 newPara.innerHTML = `Top Results:`;
-                title.parentNode.insertBefore(newPara, title.nextSibling);
+                title.after(newPara);
 
                 for (let i = 0; i < response.length; i++) {
                     if (response[i].organization_logo === null){
@@ -72,12 +73,14 @@ $("#job-search-btn").click(function(){
                         </a>
                     `);
                 }
+                console.log(response);
         } else{
             $("#loading-spinner").hide();
             const newPara2 = document.createElement("p");
             newPara2.innerHTML = `No results. Try another search.`;
             newPara2.style.color = "white";
             newPara2.style.fontWeight = "bold"; 
+            newPara2.id = "errorNoSearch"; 
             title.after(newPara2);
         }
         })
@@ -86,6 +89,8 @@ $("#job-search-btn").click(function(){
         newPara3.innerHTML = `Please search for a position title.`;
         newPara3.style.color = "white";
         newPara3.style.fontWeight = "bold"; 
+        newPara3.classList.add("center-p");
+        newPara3.id = "errorEmptySearch"; 
         title.after(newPara3);    
     }
 

@@ -152,6 +152,11 @@ input[type=text]:hover {
   background-color: white;
 }
 
+.center-p {
+  justify-content: center;
+  margin-left: 5%;
+}
+
 /*CSS Grid to Display Images*/
 .job-grid {
   display: grid;
